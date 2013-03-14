@@ -3,7 +3,8 @@
 "
 " Sections:
 " 	=> General
-" 	=> Plugin managment
+" 	=> Bundle managment : plugins
+" 	=> Bundle managment : colorscheme
 " 	=> VIM user interface
 " 	=> Colors and Fonts
 " 	=> Text, tab and indent related
@@ -37,34 +38,44 @@ nmap <leader>w :w!<cr>
 autocmd BufEnter * :cd %:p:h	
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Bundle managment
+" => Bundle managment : plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 "Bundlemanager
-Bundle'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
 "fileexplorer
-Bundle'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 
 "smartfileopener
-Bundle'kien/ctrlp.vim'
+Bundle 'kien/ctrlp.vim'
 
 "nicestatusbar
-Bundle'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/vim-powerline'
 
 "patchphpcomplete.vom
-Bundle'shawncplus/phpcomplete.vim'
-
-"awelldonecolorscheme
-Bundle'altercation/vim-colors-solarized'
+Bundle 'shawncplus/phpcomplete.vim'
 
 " HTML & CSS super fast
-Bundle'mattn/zencoding-vim'
+Bundle 'mattn/zencoding-vim'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Bundle managment : colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'desert.vim'
+Bundle 'Mustang2'
+Bundle 'peaksea'
+Bundle 'Solarized'
+Bundle 'tir_black'
+Bundle 'candycode.vim'
+Bundle 'mayansmoke'
+Bundle 'pyte'
+Bundle 'peaksea'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "show line number
@@ -127,9 +138,8 @@ if has("gui_running")
 	set cursorline				  "Highlight background of current line
 	"autocmd VimEnter * NERDTree	 "run nerdtree
 	"autocmd VimEnter * TagbarOpen
-	colorscheme candycode
-	"colorscheme desert
-	"set background=dark
+	set background=dark
+	colorscheme peaksea
 
 	" Show tabs and newline characters with ,s
 	nmap <Leader>s :set list!<CR>
@@ -139,7 +149,7 @@ if has("gui_running")
 	highlight SpecialKey guifg=#4a4a59
 else
 	set t_Co=256
-	colorscheme mustang			 "This theme actually works in 256, ir_black doesn't
+	colorscheme Mustang			 "That theme actually works in 256
 endif
 
 
