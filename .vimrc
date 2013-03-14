@@ -149,7 +149,12 @@ if has("gui_running")
 	highlight SpecialKey guifg=#4a4a59
 else
 	set t_Co=256
-	colorscheme Mustang			 "That theme actually works in 256
+	try
+		"That theme actually works in 256
+    	colorscheme Mustang
+	catch /^Vim\%((\a\+)\)\=:E185/
+	    colorscheme default
+	endtry
 endif
 
 
