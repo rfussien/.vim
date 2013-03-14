@@ -12,7 +12,7 @@ fi
 
 git submodule init
 git submodule update
-cp ./.vimrc ~
+cp `dirname $0`/.vimrc ~
 vim +BundleInstall +qall
 
 echo "Done!"
