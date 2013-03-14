@@ -10,9 +10,10 @@ if [ -f ~/.vimrc ] ; then
 	esac
 fi
 
+cd `dirname $0`
 git submodule init
 git submodule update
-cp `dirname $0`/.vimrc ~
+cp .vimrc ~
 vim +BundleInstall +qall
 
 echo "Done!"
