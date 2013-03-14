@@ -20,9 +20,9 @@ This configuration should work with vim >= 7.2
  * [zencoding](https://github.com/mattn/zencoding-vim) : HTML & CSS super fast
 
 ## Included color scheme's bundle
- * [peaksea](https://github.com/vim-scripts/peaksea.git)
+ * [peaksea](https://github.com/vim-scripts/peaksea.git) : default in gui mode
+ * [Mustang2](https://github.com/vim-scripts/Mustang2.git) : default in term-256 mode
  * [desert.vim](https://github.com/vim-scripts/desert.vim.git)
- * [Mustang2](https://github.com/vim-scripts/Mustang2.git)
  * [peaksea](https://github.com/vim-scripts/peaksea.git)
  * [Solarized](https://github.com/vim-scripts/Solarized.git)
  * [tir_black](https://github.com/vim-scripts/tir_black.git)
