@@ -17,7 +17,7 @@ git submodule init
 git submodule update
 
 # link the .vimrc
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/.vimrc ~/.vimrc
 vim +BundleInstall +qall
 
 echo "Done!"
