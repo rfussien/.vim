@@ -134,16 +134,18 @@ set tm=500
 " Enable syntax highlighting
 syntax on
 
+set background=dark
 if has("gui_running")
-	set cursorline				  "Highlight background of current line
-	"autocmd VimEnter * NERDTree	 "run nerdtree
-	"autocmd VimEnter * TagbarOpen
-	set background=dark
+	"default colorscheme
 	colorscheme peaksea
+	
+	"Highlight background of current line
+	set cursorline
 
 	" Show tabs and newline characters with ,s
 	nmap <Leader>s :set list!<CR>
 	set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×,eol:¬
+
 	"Invisible character colors
 	highlight NonText guifg=#4a4a59
 	highlight SpecialKey guifg=#4a4a59
@@ -162,7 +164,7 @@ endif
 set encoding=utf8
 
 " Use Unix as the standard file type
-set ffs=unix,dos,mac
+set ffs=unix,mac,dos
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
