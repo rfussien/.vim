@@ -155,7 +155,7 @@ set ffs=unix,dos,mac
 " Use spaces instead of tabs
 "set expandtab
 
-" Be smart when using tabs ;)
+" Be smart when using tabs
 set smarttab
 
 " 1 tab == 4 spaces
@@ -173,7 +173,7 @@ set wrap "Wrap lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files
 autocmd BufReadPost *
 	 \ if line("'\"") > 0 && line("'\"") <= line("$") |
 	 \   exe "normal! g`\"" |

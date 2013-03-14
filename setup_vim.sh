@@ -11,9 +11,13 @@ if [ -f ~/.vimrc ] ; then
 fi
 
 cd `dirname $0`
+
+# update the external vundle project (cf https://github.com/gmarik/vundle)
 git submodule init
 git submodule update
-cp .vimrc ~
+
+# link the .vimrc
+ln -s ~/.vim/vimrc ~/.vimrc
 vim +BundleInstall +qall
 
 echo "Done!"
