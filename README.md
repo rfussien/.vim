@@ -31,7 +31,8 @@ This configuration should work with vim >= 7.2
  * [peaksea](https://github.com/vim-scripts/peaksea.git
 
 ## Updating to the last version
-To update, just run that script 
+To update, just run that script
+
 	.vim/update_vimrc.sh
 
 It'll update the project, sub-projects and Bundles
