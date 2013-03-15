@@ -73,8 +73,6 @@ Bundle 'peaksea'
 Bundle 'Solarized'
 Bundle 'tir_black'
 Bundle 'candycode.vim'
-Bundle 'mayansmoke'
-Bundle 'pyte'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

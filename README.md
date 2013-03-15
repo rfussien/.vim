@@ -32,8 +32,6 @@ specific to web development
  * [Solarized](https://github.com/vim-scripts/Solarized.git)
  * [tir_black](https://github.com/vim-scripts/tir_black.git)
  * [candycode](https://github.com/vim-scripts/candycode.vim.git)
- * [mayansmoke](https://github.com/vim-scripts/mayansmoke.git)
- * [pyte](https://github.com/vim-scripts/pyte.git)
 
 ## Updating to the last version
 To update, just run that script
