@@ -61,6 +61,8 @@ Bundle 'shawncplus/phpcomplete.vim'
 " HTML & CSS super fast
 Bundle 'mattn/zencoding-vim'
 
+" Hightlight the markdown files
+Bundle 'Markdown-syntax'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : colorscheme

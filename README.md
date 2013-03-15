@@ -19,6 +19,7 @@ This configuration should work with vim >= 7.2
  * [powerline](https://github.com/Lokaltog/vim-powerline) : THE statusbar
  * [phpcomplete](https://github.com/shawncplus/phpcomplete.vim) : patch phpcomplete.vom
  * [zencoding](https://github.com/mattn/zencoding-vim) : HTML & CSS super fast
+ * [Markdown-syntax](https://github.com/vim-scripts/Markdown-syntax.git): Write your README.md in vim :)
 
 ## Included color scheme's bundle
  * [peaksea](https://github.com/vim-scripts/peaksea.git) : default in gui mode
