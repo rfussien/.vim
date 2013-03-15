@@ -1,6 +1,6 @@
 # VIM basic config
 
-Deployment of my vim configuration. Mainly inspired by amix' one (https://github.com/amix/vimrc)
+Deployment of my vim configuration. Mainly inspired by [amix' one](https://github.com/amix/vimrc)
 
 ## Pre-requisites
 
