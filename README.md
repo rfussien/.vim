@@ -8,8 +8,9 @@ This configuration should work with vim >= 7.2
 
 ## Installation
 
-	git clone https://github.com/frenus/.vim.git   # from your home directory (that's important)
-	.vim/setup_vim.sh
+	cd ~	# that's important to preced from your home
+	git clone https://github.com/frenus/.vim.git
+	.vim/setup_vimrc.sh
 
 ## Included plugin's bundles
  * [vundle](https://github.com/marik/vundle) : Bundlemanager
