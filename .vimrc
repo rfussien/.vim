@@ -71,6 +71,13 @@ Bundle 'Markdown-syntax'
 " PHP Code Sniffer
 Bundle 'phpcs.vim'
 
+" Snipets
+Bundle 'UltiSnips'
+
+" Autoclose "'({[
+Bundle 'AutoClose'
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -133,6 +140,11 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" Disable scrollbars to save place
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
