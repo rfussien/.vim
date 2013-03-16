@@ -2,15 +2,16 @@
 " @frenus' vimrc file
 "
 " Sections:
-" 	=> General
-" 	=> Bundle managment : plugins
-" 	=> Bundle managment : colorscheme
-" 	=> VIM user interface
-" 	=> Colors and Fonts
-" 	=> Text, tab and indent related
-" 	=> Moving around, tabs, windows and buffers
-" 	=> Status line
-" 	=> Helper functions
+"   => General
+"   => Bundle managment : plugins
+"   => Bundle managment : colorscheme
+"   => VIM user interface
+"   => Colors and Fonts
+"   => Text, tab and indent related
+"   => Moving around, tabs, windows and buffers
+"   => Status line
+"   => .my.vimrc functions
+"   => Helper functions
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -213,6 +214,14 @@ set laststatus=2
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => .my.vimrc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    source ~/.my.vimrc
+catch
+endtry
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions

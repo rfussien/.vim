@@ -20,4 +20,7 @@ git submodule update
 ln -s ~/.vim/.vimrc ~/.vimrc
 vim +BundleInstall +qall
 
+touch ~/.my.vimrc
+
 echo "Done!"
+
