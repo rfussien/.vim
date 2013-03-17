@@ -22,9 +22,7 @@
 set history=700
 
 " Enable/Disable filetype plugins
-filetype plugin on
-filetype indent on
-"filetype off
+filetype off
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -73,6 +71,10 @@ Bundle 'phpcs.vim'
 
 " Snipets
 Bundle 'UltiSnips'
+let g:UltiSnipsEditSplit = 'vertical'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " Autoclose "'({[
 Bundle 'AutoClose'
@@ -87,6 +89,8 @@ Bundle 'peaksea'
 Bundle 'Solarized'
 Bundle 'tir_black'
 Bundle 'candycode.vim'
+
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -160,10 +164,7 @@ if has("gui_running")
 	"Highlight background of current line
 	set cursorline
 
-	" Show tabs and newline characters with ,s
-	nmap <Leader>s :set list!<CR>
-	set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:×,eol:¬
-
+	
 	"Invisible character colors
 	highlight NonText guifg=#4a4a59
 	highlight SpecialKey guifg=#4a4a59
@@ -176,6 +177,10 @@ else
 	    colorscheme default
 	endtry
 endif
+
+" Show tabs and newline characters with F12
+map <F12> :set list!<CR>
+set listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×,eol:¶
 
 
 " Set utf8 as standard encoding and en_US as the standard language
