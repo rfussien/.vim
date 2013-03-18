@@ -10,7 +10,7 @@
 "   => Text, tab and indent related
 "   => Moving around, tabs, windows and buffers
 "   => Status line
-"   => .my.vimrc functions
+"   => Personnal config .my.vimrc
 "   => Helper functions
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -21,9 +21,6 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" Enable/Disable filetype plugins
-filetype off
-
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
@@ -32,53 +29,57 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 
-" auto-change directory to current buffer
+" Auto-change directory to current buffer
 autocmd BufEnter * :cd %:p:h	
 
-" highlight any text after column 80 (e.g. respect zend standards codeing)
+" Highlight any text after column 80 (respect of the standards coding)
 au BufWinEnter * let w:m1=matchadd('Search', '\%<120v.\%>80v', -1)
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle (Bundle managment) requierments
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
-"Bundlemanager
 Bundle 'gmarik/vundle'
 
-"fileexplorer
+" A nice file explorer
 Bundle 'scrooloose/nerdtree'
 
-"smartfileopener
+" A smart file opener
 Bundle 'kien/ctrlp.vim'
 
-"nicestatusbar
+" The statusbar (that's a must have)
 Bundle 'Lokaltog/vim-powerline'
-
-"patchphpcomplete.vom
-Bundle 'shawncplus/phpcomplete.vim'
-
-" HTML & CSS super fast
-Bundle 'mattn/zencoding-vim'
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Hightlight the markdown files
 Bundle 'Markdown-syntax'
 
-" PHP Code Sniffer
-Bundle 'phpcs.vim'
-
 " Snipets
-Bundle 'UltiSnips'
-let g:UltiSnipsEditSplit = 'vertical'
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+if has('python')
+    Bundle 'SirVer/ultisnips'
+    let g:UltiSnipsEditSplit = 'vertical'
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+else
+    Bundle 'snipMate'
+endif
 
-" Autoclose "'({[
+" Autoclose
 Bundle 'AutoClose'
 
+" WebCoding is super fast
+Bundle 'mattn/zencoding-vim'
+
+" Patch phpcomplete.vom
+Bundle 'shawncplus/phpcomplete.vim'
+
+" PHP Code Sniffer
+Bundle 'phpcs.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : colorscheme
@@ -95,7 +96,7 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"show line number
+" Show line number
 set nu
 
 " Turn on the WiLd menu
@@ -104,7 +105,7 @@ set wildmenu
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 
-"Always show current position
+" Always show current position
 set ruler
 
 " Height of the command bar
@@ -123,9 +124,6 @@ set ignorecase
 " When searching try to be smart about cases 
 set smartcase
 
-" Highlight search results
-"set hlsearch
-
 " Makes incremental search 
 set incsearch
 
@@ -134,6 +132,12 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch
+
+" Autocomplete only the longest matching
+set completeopt+=longest
+
+" I prefer help in a vertical split due to wide screen
+cnoremap help vert help
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
@@ -158,27 +162,26 @@ syntax on
 
 set background=dark
 if has("gui_running")
-	"default colorscheme
+	" Default colorscheme
 	colorscheme peaksea
 	
-	"Highlight background of current line
+	" Highlight background of current line
 	set cursorline
-
 	
-	"Invisible character colors
+	" Invisible character colors
 	highlight NonText guifg=#4a4a59
 	highlight SpecialKey guifg=#4a4a59
 else
 	set t_Co=256
 	try
-		"That theme actually works in 256
+		" That theme actually works in 256
     	colorscheme Mustang
 	catch /^Vim\%((\a\+)\)\=:E185/
 	    colorscheme default
 	endtry
 endif
 
-" Show tabs and newline characters with F12
+" Show tabs and newline characters with ,s
 map <F12> :set list!<CR>
 set listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×,eol:¶
 
@@ -192,7 +195,6 @@ set ffs=unix,mac,dos
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" I'm using the PEAR's standards
 " Use spaces instead of tabs
 set expandtab
 
@@ -233,7 +235,7 @@ set laststatus=2
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => .my.vimrc
+" => Personnal config .my.vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 try
     source ~/.my.vimrc

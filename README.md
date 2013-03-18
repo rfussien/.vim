@@ -22,6 +22,9 @@ which is suppose to be created during the installation.
  * [ctrlp](https://github.com/kien/ctrlp.vim) : A smart file opener
  * [powerline](https://github.com/Lokaltog/vim-powerline) : THE statusbar
  * [Markdown-syntax](https://github.com/vim-scripts/Markdown-syntax.git): Write your README.md in vim :)
+ * [UltiSnips](https://github.com/SirVer/ultisnips) : Snippet engine
+ * [snipMate](https://github.com/vim-scripts/snipMate.git) : In case your vim isn't compiled with python's support
+ * [AutoClose](https://github.com/vim-scripts/AutoClose.git) : Automatically close "'({[
 
 specific to web development
  * [zencoding](https://github.com/mattn/zencoding-vim) : HTML & CSS super fast
