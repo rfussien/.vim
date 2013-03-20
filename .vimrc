@@ -33,8 +33,8 @@ nmap <leader>w :w!<cr>
 autocmd BufEnter * :cd %:p:h	
 
 " Highlight any text after column 80 (respect of the standards coding)
-au BufWinEnter * let w:m1=matchadd('Search', '\%<120v.\%>80v', -1)
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
+au BufWinEnter *.php let w:m1=matchadd('Search', '\%<121v.\%>81v', -1)
+au BufWinEnter *.php let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : plugins
@@ -61,7 +61,7 @@ Bundle 'Markdown-syntax'
 " Snipets
 if has('python')
     Bundle 'SirVer/ultisnips'
-    let g:UltiSnipsEditSplit = 'vertical'
+    let g:UltiSnipsEditSplit = 'horizontal'
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -137,7 +137,7 @@ set showmatch
 set completeopt+=longest
 
 " I prefer help in a vertical split due to wide screen
-cnoremap help vert help
+"cnoremap help vert help
 
 " How many tenths of a second to blink when matching brackets
 set mat=2

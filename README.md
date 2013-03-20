@@ -26,7 +26,8 @@ which is suppose to be created during the installation.
  * [snipMate](https://github.com/vim-scripts/snipMate.git) : In case your vim isn't compiled with python's support
  * [AutoClose](https://github.com/vim-scripts/AutoClose.git) : Automatically close "'({[
 
-specific to web development
+specific for web development
+
  * [zencoding](https://github.com/mattn/zencoding-vim) : HTML & CSS super fast
  * [phpcomplete](https://github.com/shawncplus/phpcomplete.vim) : patch phpcomplete.vom
  * [phpcs.vim](https://github.com/vim-scripts/phpcodesniffer.vim.git): PPH CodeSniffer check code against standards
