@@ -21,13 +21,6 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ","
-let g:mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
 
 " Auto-change directory to current buffer
 autocmd BufEnter * :cd %:p:h	
@@ -62,6 +55,7 @@ Bundle 'Markdown-syntax'
 if has('python')
     Bundle 'SirVer/ultisnips'
     let g:UltiSnipsEditSplit = 'horizontal'
+    let g:UltiSnipsDontReverseSearchPath = "1"
     let g:UltiSnipsExpandTrigger="<tab>"
     let g:UltiSnipsJumpForwardTrigger="<tab>"
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -155,6 +149,27 @@ set guioptions-=l
 set guioptions-=L
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Shortcut
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+let g:mapleader = ","
+
+" Fast saving
+nmap <leader>w :w!<cr>
+
+" Show tabs and newline characters with ,s
+set listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×,eol:¶
+nmap <leader>p :set list!<CR>
+
+" Buffers are easy to use
+nmap <F10> :ls<cr>
+nmap <F11> :bp<cr>
+nmap <F12> :bn<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
@@ -180,11 +195,6 @@ else
 	    colorscheme default
 	endtry
 endif
-
-" Show tabs and newline characters with ,s
-map <F12> :set list!<CR>
-set listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×,eol:¶
-
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
