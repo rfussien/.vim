@@ -26,8 +26,8 @@ set history=700
 autocmd BufEnter * :cd %:p:h	
 
 " Highlight any text after column 80 (respect of the standards coding)
-au BufWinEnter *.php let w:m1=matchadd('Search', '\%<121v.\%>81v', -1)
-au BufWinEnter *.php let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
+au BufWinEnter * let w:m1=matchadd('Search', '\%<121v.\%>81v', -1)
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : plugins
