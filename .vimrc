@@ -86,6 +86,7 @@ Bundle 'tir_black'
 Bundle 'candycode.vim'
 
 filetype plugin indent on
+set nocompatible
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
