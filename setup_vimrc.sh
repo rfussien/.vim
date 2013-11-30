@@ -7,6 +7,8 @@ if [ -f ~/.vimrc ] ; then
 		[Yy]* ) echo "Let's improve an already improved vi";;
 		* ) echo "That wasn't an expected answer...";exit;;
 	esac
+    echo "Your config file has been moved to ~/.vimrc.old"
+    mv ~/.vimrc ~/.vimrc.old
 fi
 
 cd `dirname $0`
@@ -22,4 +24,3 @@ vim +BundleInstall +qall
 touch ~/.my.vimrc
 
 echo "Done!"
-
