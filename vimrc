@@ -21,11 +21,10 @@
 " Sets how many lines of history VIM has to remember
 set history=700
 
-
 " Auto-change directory to current buffer
-autocmd BufEnter * :cd %:p:h	
+autocmd BufEnter * :cd %:p:h
 
-" Highlight any text after column 80 (respect of the standards coding)
+" Highlight any text after column 80 (coding standards)
 au BufWinEnter * let w:m1=matchadd('Search', '\%<121v.\%>81v', -1)
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
 
@@ -116,10 +115,10 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
-" Makes incremental search 
+" Makes incremental search
 set incsearch
 
 " For regular expressions turn magic on
@@ -148,6 +147,9 @@ set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
+
+" enable the mouse
+set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcut
@@ -180,10 +182,10 @@ set background=dark
 if has("gui_running")
 	" Default colorscheme
 	colorscheme peaksea
-	
+
 	" Highlight background of current line
 	set cursorline
-	
+
 	" Invisible character colors
 	highlight NonText guifg=#4a4a59
 	highlight SpecialKey guifg=#4a4a59
