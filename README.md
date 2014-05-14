@@ -9,7 +9,7 @@ This configuration should work with vim >= 7.2
 ## Installation
 
 	cd ~	# that's important to preced from your home
-	git clone https://github.com/frenus/.vim.git
+	git clone https://github.com/rfussien/.vim.git
 	.vim/setup_vimrc.sh
 ## Add your configuration
 If you wan't to add specific configuration, you can add that to ~/.my.vimrc
