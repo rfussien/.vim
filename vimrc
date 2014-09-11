@@ -47,6 +47,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-powerline'
 let g:ctrlp_cmd = 'CtrlPMRU'
 
+" Multiple-cursor selection
+Bundle 'terryma/vim-multiple-cursors'
+
 " Hightlight the markdown files
 Bundle 'Markdown-syntax'
 
@@ -66,7 +69,7 @@ endif
 Bundle 'AutoClose'
 
 " WebCoding is super fast
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 
 " Patch phpcomplete.vom
 Bundle 'shawncplus/phpcomplete.vim'
