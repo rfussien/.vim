@@ -1,6 +1,7 @@
 # VIM basic config
 
-Deployment of my vim configuration. Mainly inspired by the [amix's one](https://github.com/amix/vimrc).
+My vim configuration.
+Mainly inspired by the [amix's one](https://github.com/amix/vimrc).
 
 ## Pre-requisites
 
@@ -8,9 +9,8 @@ This configuration should work with vim >= 7.2
 
 ## Installation
 
-	cd ~	# that's important to preced from your home
-	git clone https://github.com/rfussien/.vim.git
-	.vim/setup_vimrc.sh
+    curl -sS https://raw.githubusercontent.com/rfussien/.vim/master/installer | sh
+
 ## Add your configuration
 If you wan't to add specific configuration, you can add that to ~/.my.vimrc
 which is suppose to be created during the installation.
@@ -43,7 +43,7 @@ specific for web development
 ## Updating to the last version
 To update, just run that script
 
-	.vim/update_vimrc.sh
+	.vim/selfupdate
 
 It'll update the project, sub-projects and Bundles
 

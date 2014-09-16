@@ -11,7 +11,8 @@ if [ -f ~/.vimrc ] ; then
     mv ~/.vimrc ~/.vimrc.old
 fi
 
-cd `dirname $0`
+git clone https://github.com/rfussien/.vim.git
+cd .vim
 
 # update the external vundle project (cf https://github.com/gmarik/vundle)
 git submodule init
