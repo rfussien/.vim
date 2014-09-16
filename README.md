@@ -8,8 +8,9 @@ Mainly inspired by the [amix's one](https://github.com/amix/vimrc).
 This configuration should work with vim >= 7.2
 
 ## Installation
-
-    curl -sS https://raw.githubusercontent.com/rfussien/.vim/master/installer | sh
+```bash
+    curl https://raw.githubusercontent.com/rfussien/.vim/master/installer -O && sh installer && rm installer
+```
 
 ## Add your configuration
 If you wan't to add specific configuration, you can add that to ~/.my.vimrc
@@ -25,10 +26,11 @@ which is suppose to be created during the installation.
  * [UltiSnips](https://github.com/SirVer/ultisnips) : Snippet engine
  * [snipMate](https://github.com/vim-scripts/snipMate.git) : In case your vim isn't compiled with python's support
  * [AutoClose](https://github.com/vim-scripts/AutoClose.git) : Automatically close "'({[
+ * [multiple-cursors](https://github.com/terryma/vim-multiple-cursors) : Sublime text like multiple cursor
 
 specific for web development
 
- * [zencoding](https://github.com/mattn/zencoding-vim) : HTML & CSS super fast
+ * [emmet](https://github.com/mattn/emmet-vim) : HTML & CSS super fast
  * [phpcomplete](https://github.com/shawncplus/phpcomplete.vim) : patch phpcomplete.vom
  * [phpcs.vim](https://github.com/vim-scripts/phpcodesniffer.vim.git): PPH CodeSniffer check code against standards
 
@@ -42,8 +44,9 @@ specific for web development
 
 ## Updating to the last version
 To update, just run that script
-
+```bash
 	.vim/selfupdate
+```
 
 It'll update the project, sub-projects and Bundles
 

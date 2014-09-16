@@ -22,6 +22,6 @@ ln -s ~/.vim/vimrc ~/.vimrc
 touch ~/.my.vimrc
 
 # install bundles
-vim +set nomore +BundleInstall +BundleClean +qall
+vim +PluginInstall +qall
 
 echo "Done!"
