@@ -32,26 +32,27 @@ au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>121v.\+', -1)
 " => Bundle managment : plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vundle (Bundle managment) requierments
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
 " A nice file explorer
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 
 " A smart file opener
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 
 " The statusbar (that's a must have)
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'Lokaltog/vim-powerline'
 let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Multiple-cursor selection
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 
 " Hightlight the markdown files
-Bundle 'Markdown-syntax'
+Plugin 'Markdown-syntax'
 
 " Snipets
 if has('python')
@@ -66,29 +67,29 @@ else
 endif
 
 " Autoclose
-Bundle 'AutoClose'
+Plugin 'AutoClose'
 
 " WebCoding is super fast
-Bundle 'mattn/emmet-vim'
+Plugin 'mattn/emmet-vim'
 
 " Patch phpcomplete.vom
-Bundle 'shawncplus/phpcomplete.vim'
+Plugin 'shawncplus/phpcomplete.vim'
 
 " PHP Code Sniffer
-Bundle 'phpcs.vim'
+Plugin 'phpcs.vim'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Bundle managment : colorscheme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Bundle 'desert.vim'
-Bundle 'Mustang2'
-Bundle 'peaksea'
-Bundle 'Solarized'
-Bundle 'tir_black'
-Bundle 'candycode.vim'
+Plugin 'desert.vim'
+Plugin 'Mustang2'
+Plugin 'peaksea'
+Plugin 'Solarized'
+Plugin 'tir_black'
+Plugin 'candycode.vim'
 
+call vundle#end()
 filetype plugin indent on
-set nocompatible
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
