@@ -18,7 +18,7 @@ which is suppose to be created during the installation.
 
 
 ## Included plugin's bundles
- * [vundle](https://github.com/marik/Vundle.vim) : Plugin manager (like pathogen, but painless)
+ * [vundle](https://github.com/marik/vundle) : Bundlemanager
  * [nerdtree](https://github.com/scrooloose/nerdtree) : A nice file explorer
  * [ctrlp](https://github.com/kien/ctrlp.vim) : A smart file opener
  * [powerline](https://github.com/Lokaltog/vim-powerline) : THE statusbar
