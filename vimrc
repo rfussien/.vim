@@ -169,7 +169,7 @@ let g:mapleader = ","
 nmap <leader>w :w!<cr>
 
 " Show tabs and newline characters with ,s
-set listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×,eol:¶
+"set listchars=tab:▸\ ,trail:·,extends:»,precedes:«,nbsp:×,eol:¶
 nmap <leader>p :set list!<CR>
 
 " Buffers are easy to use
