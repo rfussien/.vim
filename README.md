@@ -9,7 +9,7 @@ This configuration should work with vim >= 7.2
 
 ## Installation
 ```bash
-    curl https://raw.githubusercontent.com/rfussien/.vim/master/installer -O && sh installer && rm installer
+    curl -sS https://raw.githubusercontent.com/rfussien/.vim/master/installer | sh
 ```
 
 ## Add your configuration
