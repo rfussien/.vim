@@ -56,7 +56,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Markdown-syntax'
 
 " Snipets
-if has('python')
+if has('python3')
     Bundle 'SirVer/ultisnips'
     let g:UltiSnipsEditSplit = 'horizontal'
     let g:UltiSnipsDontReverseSearchPath = "1"
